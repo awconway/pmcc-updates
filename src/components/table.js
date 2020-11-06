@@ -44,11 +44,11 @@ const Row = styled(Link)`
   }
 
   @media ${devices.tablet} {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
   }
 `
 
-const ExternalRow = styled.a`
+const ExternalRow = styled.p`
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.25rem;
@@ -56,7 +56,7 @@ const ExternalRow = styled.a`
   border-bottom: 2px solid var(--fontSecondary);
   padding: 1rem;
   background: transparent;
-  cursor: pointer;
+  // cursor: pointer;
   text-decoration: none;
   color: var(--fontSecondary);
 
@@ -79,7 +79,7 @@ const ExternalRow = styled.a`
   }
 
   @media ${devices.tablet} {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
   }
 `
 
@@ -127,12 +127,15 @@ const renderRow = (rowData, index) => {
     return (
       <ExternalRow
         key={index}
-        href={rowData.path}
-        target="_blank"
-        rel="noreferrer noopener"
-        aria-label="Opens in a new tab"
+        // href={rowData.path}
+        // target="_blank"
+        // rel="noreferrer noopener"
+        // aria-label="Opens in a new tab"
       >
         <P>{rowData.title}</P>
+        <div>
+          <P className="subhead">{rowData.role}</P>
+        </div>
         <div>
           <P className="subhead">{rowData.subhead}</P>
           {rowData.date && <Date>{rowData.date}</Date>}

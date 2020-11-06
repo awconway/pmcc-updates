@@ -8,8 +8,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO
-        title="Martin Laws | UX Developer"
-        description="I'm a Senior UX Developer @ Shopify, design thinker + tech speaker, recovering entrepreneur, and dog father."
+        title="Aaron Conway | Nurse Researcher"
+        description="RBC Chair in Cardiovascular nursing research | Procedural sedation researcher"
       />
       <Splash />
     </Layout>

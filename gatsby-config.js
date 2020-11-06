@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Martin Laws`,
-    description: `UX Developer, design thinker, dog dad.`,
-    author: `@martinlaws`,
-    url: "https://mlaws.ca",
-    image: "/images/martin.png",
-    twitterUsername: "@martinblaws",
+    title: `Aaron Conway`,
+    description: `RBC Chair in Cardiovascular Nursing Research`,
+    author: `@aw_conway`,
+    url: "https://www.aaroncoway.info",
+    image: "/images/circle-cropped.png",
+    twitterUsername: "@aw_conway",
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -21,13 +21,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Martin Laws | UX Developer`,
-        short_name: `mlaws`,
+        name: `Aaron Conway | Nurse Researcher`,
+        short_name: `awconway`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/martin.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-styled-components`,

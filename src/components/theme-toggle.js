@@ -1,7 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { useTheme, themeOptions } from "../hooks/theme-context"
-import { NavSectionHeading } from "./base"
 
 const ThemeOptionContainer = styled.div`
   display: flex;
@@ -49,7 +48,6 @@ function ThemeToggle() {
 
   return (
     <ThemeOptionContainer>
-      <NavSectionHeading>Themes</NavSectionHeading>
       {themeOptions.map(themeOption => (
         <ThemeOption
           key={themeOption}

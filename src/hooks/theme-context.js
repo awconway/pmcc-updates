@@ -3,7 +3,7 @@ import React, { useEffect, useReducer, createContext } from "react"
 const ThemeStateContext = createContext()
 const ThemeDispatchContext = createContext()
 
-const themeOptions = ["dark", "light", "synthWave84"]
+const themeOptions = ["dark", "light"]
 
 export const palettes = {
   dark: {
@@ -26,16 +26,6 @@ export const palettes = {
     accentSecondary: `rgb(52, 52, 52)`,
     other: `rgb(52, 52, 52)`,
   },
-  synthWave84: {
-    sidebarBg: `#241b2f`,
-    contentBg: `#262335`,
-    fontPrimary: `#36f9f6`,
-    fontSecondary: `#ff7edb`,
-    linkPrimary: `#72f1b8`,
-    accentPrimary: `#fe4450`,
-    accentSecondary: `#fede5d`,
-    other: `#f97e72`,
-  },
 }
 
 function themeReducer(state, action) {
@@ -56,13 +46,13 @@ function themeReducer(state, action) {
 
 function ThemeProvider({ children }) {
   const [state, dispatch] = useReducer(themeReducer, {
-    name: "synthWave84",
+    name: "light",
   })
 
   useEffect(() => {
     dispatch({
       type: `SET_THEME`,
-      themeName: localStorage.getItem("theme") || "synthWave84",
+      themeName: localStorage.getItem("theme") || "light",
     })
   }, [])
 

@@ -1,26 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 import { Emoji } from "./emoji"
-import { Main, H1 as BaseH1, StyledA, StyledLink } from "./base"
-import { useStaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import { Main, H1 as BaseH1 } from "./base"
 
-export const query = graphql`
-  query {
-    fileName: file(relativePath: { eq: "martin.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
-
-const ImageContainer = styled.div`
-  max-width: 600px;
-  align-self: flex-start;
-`
 
 const P = styled.p`
   color: var(--fontPrimary);
@@ -41,51 +23,20 @@ const BioSection = styled.div`
 `
 
 function Splash() {
-  const data = useStaticQuery(query)
   return (
     <>
       <Main>
-        <ImageContainer>
-          <Image
-            fluid={data.fileName.childImageSharp.fluid}
-            alt="Pixel art version of Martin's headshot"
-          />
-        </ImageContainer>
         <article>
           <BioSection>
-            <P>Hi, there!</P>
+            <P>It's update time!</P>
             <H1>
-              I'm Martin <Emoji symbol="👋🏻" label="waving hand" />
+              June 2020 - November 2020 <Emoji symbol="🗓" label="calendar" />
             </H1>
           </BioSection>
           <P>
-            I'm a Senior UX Developer @{" "}
-            <StyledA
-              href="https://www.shopify.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Shopify
-            </StyledA>
-            ,
-          </P>
-          <P>
-            design thinker + tech{" "}
-            <StyledLink to="/speaking/">speaker</StyledLink>,
-          </P>
-          <P>
-            recovering{" "}
-            <StyledA
-              href="https://consultlowtide.ca/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              entrepreneur
-            </StyledA>
-            ,
-          </P>
-          <P>
-            and <StyledLink to="/maya">dog father</StyledLink>.
+            This is a record of the activities undertaken as part 
+            of my role as the RBC Chair in Cardiovascular Nursing Research
+            at the Peter Munk Cardiac Centre.
           </P>
         </article>
       </Main>

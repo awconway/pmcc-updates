@@ -6,11 +6,16 @@ import {
   devices,
   H1 as DefaultH1,
   StyledLink,
-  StyledA as BaseStyledA,
   NavSectionHeading,
 } from "./base"
 import { Emoji } from "./emoji"
-import { navItems, social as socialItems } from "../utilities/constants"
+
+const navItems = [
+  { name: "writing", label: "publications", path: "/writing/" },
+  { name: "grants", label: "funding", path: "/grants/" },
+  { name: "capacity", label: "capacity building", path: "/capacity/" },
+]
+
 
 const Aside = styled.aside`
   display: grid;
@@ -80,15 +85,6 @@ const NavLink = styled(StyledLink)`
   }
 `
 
-const StyledA = styled(BaseStyledA)`
-  &:hover,
-  &:focus {
-    color: var(--fontPrimary);
-  }
-  &.isActive::after {
-    content: " 📍";
-  }
-`
 
 const HamburgerMenu = styled.div`
   width: 100vw;
@@ -163,7 +159,7 @@ const Sidebar = ({ siteTitle }) => {
           <LogoLink to="/">{siteTitle}</LogoLink>
         </H1>
         <Nav>
-          <NavSectionHeading>Pages</NavSectionHeading>
+          <NavSectionHeading>Progress</NavSectionHeading>
           {navItems.map((navItem, index) => (
             <NavLink
               key={index}
@@ -174,21 +170,7 @@ const Sidebar = ({ siteTitle }) => {
             </NavLink>
           ))}
         </Nav>
-        <Nav>
-          <NavSectionHeading>Social</NavSectionHeading>
-          {socialItems.map((socialItem, index) => (
-            <StyledA
-              key={index}
-              href={socialItem.path}
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label={socialItem.title}
-            >
-              {socialItem.title}
-            </StyledA>
-          ))}
-        </Nav>
-
+        
         <ThemeToggle />
       </Aside>
     </>

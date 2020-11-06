@@ -64,6 +64,14 @@ export const H1 = styled.h1`
   --casl: "CASL" 0.2;
 `
 
+export const H2 = styled.h2`
+  color: var(--fontPrimary);
+  --wght: "wght" 600;
+  --mono: "MONO" 0;
+  --slnt: "slnt" 0;
+  --casl: "CASL" 0.2;
+`
+
 export const P = styled.p`
   color: var(--fontSecondary);
 `

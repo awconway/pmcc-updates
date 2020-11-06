@@ -1,9 +1,9 @@
 {
-  "name": "martin-laws-portfolio",
+  "name": "pmcc-updates",
   "private": false,
-  "description": "Martin Laws personal portfolio",
+  "description": "Aaron Conway research update",
   "version": "0.1.0",
-  "author": "Martin Laws <mlaws@hey.com>",
+  "author": "Aaron Conway <aaron.conway@utoronto.ca",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.20.12",

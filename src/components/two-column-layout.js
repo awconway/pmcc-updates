@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Sidebar from "./sidebar"
 import styled from "styled-components"
 import { devices } from "./base"
-import { Emoji } from "./emoji"
 
 const TwoColumnGrid = styled.div`
   display: grid;
@@ -31,21 +30,6 @@ const Main = styled.div`
   }
 `
 
-const Footer = styled.footer`
-  background: var(--contentBg);
-  color: var(--fontPrimary);
-  min-height: 4rem;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 1rem;
-
-  @media ${devices.tablet} {
-    flex-flow: column nowrap;
-  }
-`
-
 function TwoColumnLayout({ children }) {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
@@ -66,16 +50,6 @@ function TwoColumnLayout({ children }) {
 
         <Main>
           {children}
-
-          <Footer>
-            <div>
-              Made with
-              <Emoji label="heart" symbol="♥️" marginLoose />+
-              <Emoji label="coffee" symbol="☕" marginLoose />
-              in
-              <Emoji label="Canada" symbol="🇨🇦" marginLoose />
-            </div>
-          </Footer>
         </Main>
       </TwoColumnGrid>
     </>
