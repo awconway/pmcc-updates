@@ -127,10 +127,6 @@ const renderRow = (rowData, index) => {
     return (
       <ExternalRow
         key={index}
-        // href={rowData.path}
-        // target="_blank"
-        // rel="noreferrer noopener"
-        // aria-label="Opens in a new tab"
       >
         <P>{rowData.title}</P>
         <div>

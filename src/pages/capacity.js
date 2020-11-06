@@ -9,22 +9,26 @@ import { SingleColumnMain as Main, H1, H2 } from "../components/base"
 const capacityQI = [
   {
     title: "Bone Marrow Biopsy and Aspiration NP-led Procedural Sedation Clinic",
-    subhead: "QI Project with PMH",
+    role: "QI Project with PMH",
+    date: "Planning stages"
   },
   {
     title: "Capnography for TEE in CICU",
-    subhead: "Mentor for CAP fellowship application",
+    role: "Mentor for CAP fellowship application",
+    date: "Submitted application"
   },
 ]
 
 const capacityPhd = [
   {
-    title: "Navpreet Kamboj",
-    subhead: "Year 2",
+    role: "Navpreet Kamboj",
+    title: "Predicting hemodynamic responses to nitroglycerin infusion titrations",
+    date: "Year 2",
   },
   {
-    title: "Mohammad Godarzi",
-    subhead: "Applying in 2021",
+    title: "Barriers to integrating predictions from machine learning models into nursing practice",
+    role: "Mohammad Godarzi",
+    date: "Applying in 2021",
   },
 ]
 

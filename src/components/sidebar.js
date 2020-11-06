@@ -18,6 +18,7 @@ const navItems = [
 const projectItems = [
   { name: "fasting", label: "fasting", path: "/projectFasting/" },
   { name: "ssa", label: "sedation state", path: "/projectSsa/" },
+  { name: "apnea", label: "apnea prediction", path: "/projectApnea/" },
   { name: "capacity", label: "capacity building", path: "/capacity/" },
 ]
 
