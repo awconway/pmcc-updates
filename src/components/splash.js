@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Emoji } from "./emoji"
-import { Main, H1 as BaseH1 } from "./base"
+import { SingleColumnMain as Main, H1 as BaseH1 } from "./base"
 
 
 const P = styled.p`
@@ -12,6 +12,13 @@ const P = styled.p`
   --wght: "wght" 400;
   --slnt: "slnt" 0;
   --CRSV: "CRSV" 0.5;
+`
+
+const Ital = styled.span`
+  --slnt: "slnt" -15;
+  --casl: "CASL" 1;
+  --wght: "wght" 200;
+  letter-spacing: 0.05em;
 `
 
 const H1 = styled(BaseH1)`
@@ -28,7 +35,7 @@ function Splash() {
       <Main>
         <article>
           <BioSection>
-            <P>It's update time!</P>
+            <Ital>It's update time!</Ital>
             <H1>
               June 2020 - November 2020 <Emoji symbol="🗓" label="calendar" />
             </H1>

@@ -26,6 +26,12 @@ const writing = [
     date: "Under review",
   },
   {
+    title: "Effectiveness of nurse-led clinics in the early discharge period after percutaneous coronary intervention: a systematic review",
+    subhead: "Australian Critical Care",
+    role: "Co-Author",
+    date: "accepted 🎉",
+  },
+  {
     title: "Validating the perioperative thirst discomfort scale",
     subhead: "Journal of Radiology Nursing",
     role: "First Author",
@@ -45,7 +51,7 @@ const writing = [
   },
   {
     title: "Probability of Major Depression Classification Based on the SCID, CIDI, and MINI Diagnostic Interviews: A Synthesis of Three Individual Participant Data Meta-Analyses",
-    subhead: "JAMA",
+    subhead: "Psychotherapy and Psychosomatics",
     role: "Group Author",
     date: "2020",
   },

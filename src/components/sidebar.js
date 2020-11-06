@@ -13,9 +13,13 @@ import { Emoji } from "./emoji"
 const navItems = [
   { name: "writing", label: "publications", path: "/writing/" },
   { name: "grants", label: "funding", path: "/grants/" },
-  { name: "capacity", label: "capacity building", path: "/capacity/" },
 ]
 
+const projectItems = [
+  { name: "fasting", label: "fasting", path: "/projectFasting/" },
+  { name: "ssa", label: "sedation state", path: "/projectSsa/" },
+  { name: "capacity", label: "capacity building", path: "/capacity/" },
+]
 
 const Aside = styled.aside`
   display: grid;
@@ -102,10 +106,10 @@ const HamburgerMenu = styled.div`
   }
 `
 
-const HelpText = styled.span`
-  font-size: 1rem;
-  margin-right: 1rem;
-`
+// const HelpText = styled.span`
+//   font-size: 1rem;
+//   margin-right: 1rem;
+// `
 
 const Button = styled.button`
   height: 100%;
@@ -150,8 +154,8 @@ const Sidebar = ({ siteTitle }) => {
     <>
       <HamburgerMenu>
         <Button onClick={() => setshowSidebarOnMobile(!showSidebarOnMobile)}>
-          <HelpText className="helpText">{"hamburger menu →"}</HelpText>
-          <Emoji label="hamburger" symbol="🍔" />
+          {/* <HelpText className="helpText">{"pages →"}</HelpText> */}
+          <Emoji label="plus" symbol="➕" />
         </Button>
       </HamburgerMenu>
       <Aside className={showSidebarOnMobile && "showSidebarOnMobile"}>
@@ -167,6 +171,18 @@ const Sidebar = ({ siteTitle }) => {
               to={navItem.path}
             >
               {navItem.label}
+            </NavLink>
+          ))}
+        </Nav>
+        <Nav>
+          <NavSectionHeading>Ongoing work</NavSectionHeading>
+          {projectItems.map((projectItem, index) => (
+            <NavLink
+              key={index}
+              className={isCurrentRoute(projectItem.path)}
+              to={projectItem.path}
+            >
+              {projectItem.label}
             </NavLink>
           ))}
         </Nav>
