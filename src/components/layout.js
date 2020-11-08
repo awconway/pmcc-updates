@@ -8,10 +8,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { ThemeProvider } from "../hooks/theme-context"
 import TwoColumnLayout from "./two-column-layout"
-import "./layout.css"
 import styled from "styled-components"
+import "../components/importFont.css"
 
 const FlexContainer = styled.div`
   display: flex;
@@ -26,11 +25,9 @@ const FlexContainer = styled.div`
 
 const Layout = ({ children }) => {
   return (
-    <ThemeProvider>
       <FlexContainer>
         <TwoColumnLayout>{children}</TwoColumnLayout>
       </FlexContainer>
-    </ThemeProvider>
   )
 }
 

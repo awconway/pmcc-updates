@@ -1,15 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Recursive:slnt,wght,CASL,MONO@-15..0,300..900,0..1,0..1&display=swap");
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyles = createGlobalStyle`
 
 :root {
-  --sidebarBg: rgb(255, 255, 255);
-  --contentBg: rgb(211, 211, 211);
-  --fontPrimary: rgb(52, 52, 52);
-  --fontSecondary: #000;
-  /* --linkPrimary: #72f1b8; */
-  --linkPrimary: var(--fontSecondary);
-  --accentPrimary: rgb(52, 52, 52);
-  --accentSecondary: rgb(52, 52, 52);
-  --other: rgb(52, 52, 52);
   --mono: "MONO" 1;
   --casl: "CASL" 0;
   --wght: "wght" 400;
@@ -636,3 +629,6 @@ pre tt:after {
     font-size: 100%;
   }
 }
+`;
+
+export default GlobalStyles;
