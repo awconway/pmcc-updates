@@ -43,7 +43,7 @@ const Row = styled(Link)`
     outline: 3px solid var(--accentPrimary);
   }
 
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     grid-template-columns: 2fr 1fr 1fr;
   }
 `
@@ -78,7 +78,7 @@ const ExternalRow = styled.p`
     outline: 3px solid var(--accentPrimary);
   }
 
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     grid-template-columns: 2fr 1fr 1fr;
   }
 `
@@ -94,7 +94,7 @@ const P = styled.p`
     text-align: start;
     color: var(--fontSecondary);
 
-    @media ${devices.tablet} {
+    @media ${devices.laptop} {
       text-align: end;
     }
   }
@@ -108,7 +108,7 @@ const Date = styled(P)`
   --mono: "MONO" 0;
   --slnt: "slnt" -15;
 
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     text-align: end;
   }
 `
