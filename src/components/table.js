@@ -43,7 +43,7 @@ const Row = styled(Link)`
     outline: 3px solid var(--accentPrimary);
   }
 
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     grid-template-columns: 2fr 1fr 1fr;
   }
 `
@@ -78,7 +78,7 @@ const ExternalRow = styled.p`
     outline: 3px solid var(--accentPrimary);
   }
 
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     grid-template-columns: 2fr 1fr 1fr;
   }
 `
