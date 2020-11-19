@@ -108,7 +108,7 @@ const Date = styled(P)`
   --mono: "MONO" 0;
   --slnt: "slnt" -15;
 
-  @media ${devices.tablet} {
+  @media ${devices.laptop} {
     text-align: end;
   }
 `
