@@ -94,7 +94,7 @@ const P = styled.p`
     text-align: start;
     color: var(--fontSecondary);
 
-    @media ${devices.tablet} {
+    @media ${devices.laptop} {
       text-align: end;
     }
   }
