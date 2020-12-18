@@ -19,8 +19,11 @@ const NotFoundPage = () => (
         </H1>
         <P>
           There's been an error. We're really sorry! Give me a shout via email
-          at <StyledA href="mailto:mlaws@hey.com">mlaws@hey.com</StyledA>, or
-          head <StyledLink to="/">home</StyledLink>.
+          at{" "}
+          <StyledA href="mailto:aaronconwayphd@gmail.com">
+            aaronconwayphd@gmail.com
+          </StyledA>
+          , or head <StyledLink to="/">home</StyledLink>.
         </P>
       </article>
     </Main>
