@@ -25,9 +25,9 @@ const FlexContainer = styled.div`
 
 const Layout = ({ children }) => {
   return (
-      <FlexContainer>
-        <TwoColumnLayout>{children}</TwoColumnLayout>
-      </FlexContainer>
+    <FlexContainer>
+      <TwoColumnLayout>{children}</TwoColumnLayout>
+    </FlexContainer>
   )
 }
 

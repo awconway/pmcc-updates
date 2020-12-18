@@ -2,23 +2,18 @@ import PropTypes from "prop-types"
 import React, { useState } from "react"
 import styled from "styled-components"
 import ThemeToggle from "./theme-toggle"
-import {
-  devices,
-  H1 as DefaultH1,
-  StyledLink,
-  NavSectionHeading,
-} from "./base"
+import { devices, H1 as DefaultH1, StyledLink, NavSectionHeading } from "./base"
 import { Emoji } from "./emoji"
 
 const navItems = [
-  { name: "writing", label: "publications", path: "/writing/" },
+  { name: "pubs", label: "publications", path: "/pubs/" },
   { name: "grants", label: "funding", path: "/grants/" },
 ]
 
 const projectItems = [
-  { name: "fasting", label: "fasting", path: "/projectFasting/" },
-  { name: "ssa", label: "sedation state", path: "/projectSsa/" },
-  { name: "apnea", label: "apnea prediction", path: "/projectApnea/" },
+  { name: "fasting", label: "fasting", path: "/fasting/" },
+  { name: "ssa", label: "sedation state", path: "/ssa/" },
+  { name: "apnea", label: "apnea prediction", path: "/apnea/" },
   { name: "capacity", label: "capacity building", path: "/capacity/" },
 ]
 
@@ -89,7 +84,6 @@ const NavLink = styled(StyledLink)`
     content: " 📍";
   }
 `
-
 
 const HamburgerMenu = styled.div`
   width: 100vw;
@@ -187,7 +181,7 @@ const Sidebar = ({ siteTitle }) => {
             </NavLink>
           ))}
         </Nav>
-        
+
         <ThemeToggle />
       </Aside>
     </>
