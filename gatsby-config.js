@@ -4,7 +4,7 @@ module.exports = {
     description: `RBC Chair in Cardiovascular Nursing Research`,
     author: `@aw_conway`,
     url: "https://pmcc-updates.netlify.app",
-    image: "/images/circle-cropped.png",
+    image: "/images/aaronconway.png",
     twitterUsername: "@aw_conway",
   },
   plugins: [
