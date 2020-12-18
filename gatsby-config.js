@@ -3,7 +3,7 @@ module.exports = {
     title: `Aaron Conway`,
     description: `RBC Chair in Cardiovascular Nursing Research`,
     author: `@aw_conway`,
-    url: "https://www.aaroncoway.info",
+    url: "https://pmcc-updates.netlify.app",
     image: "/images/circle-cropped.png",
     twitterUsername: "@aw_conway",
   },
