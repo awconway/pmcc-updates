@@ -3,7 +3,6 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import ThemeToggle from "./theme-toggle"
 import { devices, H1 as DefaultH1, StyledLink, NavSectionHeading } from "./base"
-import { Emoji } from "./emoji"
 
 const navItems = [
   { name: "pubs", label: "publications", path: "/pubs/" },
@@ -16,6 +15,56 @@ const projectItems = [
   { name: "apnea", label: "apnea prediction", path: "/apnea/" },
   { name: "capacity", label: "capacity building", path: "/capacity/" },
 ]
+
+const StyledBurger = styled.button`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+
+  &:focus {
+    outline: none;
+  }
+
+  div {
+    width: 2rem;
+    height: 0.25rem;
+    background: var(--fontSecondary);
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+
+    :first-child {
+      transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
+    }
+
+    :nth-child(2) {
+      opacity: ${({ open }) => (open ? "0" : "1")};
+      transform: ${({ open }) => (open ? "translateX(20px)" : "translateX(0)")};
+    }
+
+    :nth-child(3) {
+      transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    }
+  }
+`
+
+const Burger = ({ open, setOpen }) => {
+  return (
+    <StyledBurger open={open} onClick={() => setOpen(!open)}>
+      <div />
+      <div />
+      <div />
+    </StyledBurger>
+  )
+}
 
 const Aside = styled.aside`
   display: grid;
@@ -118,7 +167,7 @@ const Button = styled.button`
   color: var(--fontSecondary);
   --casl: "CASL" 1;
   --wght: "wght" 400;
-  outline: 3px solid var(--other);
+  // outline: 3px solid var(--other);
 
   & .helpText {
     text-decoration: underline;
@@ -145,12 +194,13 @@ const Sidebar = ({ siteTitle }) => {
     typeof window !== "undefined" ? window.location.pathname : "/"
   const isCurrentRoute = routeName => routeName === pathName && "isActive"
 
+  const [open, setOpen] = useState(false)
+
   return (
     <>
       <HamburgerMenu>
         <Button onClick={() => setshowSidebarOnMobile(!showSidebarOnMobile)}>
-          {/* <HelpText className="helpText">{"pages →"}</HelpText> */}
-          <Emoji label="plus" symbol="➕" />
+          <Burger open={open} setOpen={setOpen} />
         </Button>
       </HamburgerMenu>
       <Aside className={showSidebarOnMobile && "showSidebarOnMobile"}>

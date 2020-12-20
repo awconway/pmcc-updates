@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Splash from "../components/splash"
 import SEO from "../components/seo"
 
-const IndexPage = () => {
+export default function IndexPage() {
   return (
     <Layout>
       <SEO
@@ -15,5 +15,3 @@ const IndexPage = () => {
     </Layout>
   )
 }
-
-export default IndexPage
