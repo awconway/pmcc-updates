@@ -32,6 +32,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        gatsbyRemarkPlugins: [ 
+          `gatsby-remark-copy-linked-files`
+        ],
         defaultLayouts: {
           default: require.resolve("./src/components/layoutReports.js"),
         },
